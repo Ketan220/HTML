@@ -1,17 +1,35 @@
-<!-- Let’s see the example of single-line comment i.e. added before the statement. -->
+<!-- Example to accept number from the user -->
+<!DOCTYPE html>
+<html lang="en">
 
-    <script>  
-    // It is single line comment  
-    document.write("hello javascript");  
-    </script>  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg() {
+            var num;
+            num=document.f1.n1.value;
+            alert("Num" + num);
+        }
+    </script>
 
+</head>
 
-Test it Now
-Let’s see the example of single-line comment i.e. added after the statement.
+<body>
+    <h1 align=center>Mkpits</h1>
+    <hr>
+    <center>
+        <fieldset>
+            <legend>Calculation</legend>
+            <form name="f1" style="width: 50%;">
+                Enter number <input type="text" name="n1">
+                <br><br>
+                <input type="text" value="click" onclick="msg();">
+            </form>
+        </fieldset>
+    </center>
+</body>
 
-    <script>  
-    var a=10;  
-    var b=20;  
-    var c=a+b;//It adds values of a and b variable  
-    document.write(c);//prints sum of 10 and 20  
-    </script>  
+</html>
