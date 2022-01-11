@@ -1,23 +1,22 @@
-<!-- To call function, you need to work on event. Here we are using onclick event to call msg() function. -->
+<!-- Example to accept number from the user -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onclick</title>
-    
-    <script type="text/javascript">
+    <title>Document</title>
+    <script>
         function msg(){
-            alert("Hello Mkpits");
+            var num,sq;
+            num=prompt("Enter the number"); //prompt is function to accept input from the user
+            sq=num*num;
+            alert("Square "+sq);
         }
     </script>
 </head>
-
 <body>
-    <p>Wlecome to java script</p>
-    <form>
-        <input type="button" value="click" onclick="msg()" />
-    </form>
+    <input type="button" value="click" onclick="msg();">
+    
 </body>
 </html>
