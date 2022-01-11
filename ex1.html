@@ -1,18 +1,30 @@
-<!-- Lets create first java script program -->
+<!-- A JavaScript variable is simply a name of storage location. 
+There are two types of variables in JavaScript : local variable and global variable.
+
+Correct JavaScript variables
+    var x = 10;  
+    var _value="sonoo";  
+
+Incorrect JavaScript variables
+
+    var  123=30;  
+    var *aa=320;  
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First JSP</title>
-    <!-- The text/javascript is the content type that provides information to the browser about the data. -->
-    <script type="text/javascript">
-        // The document.write() function is used to display dynamic content through JavaScript. 
-        document.write("JavaScript is a simple language for mkpits learners");  
+    <title>Variable</title>
+    <script>
+        function msg(){
+            var num=10;
+            alert("Num= "+num);
+        }
     </script>
 </head>
 <body>
-    <h1>Hello,I'm Ketan</h1>
+    <input type="button" value="click" onclick="msg();">
 </body>
 </html>
