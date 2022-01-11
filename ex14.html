@@ -1,0 +1,48 @@
+<!-- wap to accept length , breadth and height and then print volume. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <script>
+        function msg() {
+            var len,bre,hei,volume;
+            len=parseFloat(document.f1.n1.value);
+            bre=parseFloat(document.f1.n2.value);
+            hei=parseFloat(document.f1.n3.value);
+            volume=len*bre;
+            document.getElementById("result").innerHTML=volume;
+            alert("Volume="+volume);
+        }
+
+    </script>
+</head>
+<body>
+    <h1 align=center>Ketan</h1>
+    <hr>
+    <center>
+        <fieldset>
+            <legend>Find area</legend>
+            <form name="f1" style="width: 50%;">
+            Enter number1 <input type="text" name="n1">
+            <br><br>
+            
+            Enter number2 <input type="text" name="n2">
+            <br><br>
+
+            Enter number3 <input type="text" name="n3">
+            <br><br>
+
+            <input type="button" value="click" onclick="msg();">
+            <br><br>
+
+            Volume: <span id="result" name="result"></span>
+            
+            
+            </form>
+        </fieldset>
+    </center>
+</body>
+</html>
