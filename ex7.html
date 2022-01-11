@@ -1,16 +1,36 @@
-Test it Now
-JavaScript Multi line Comment
+<!-- Example to accept number from the user -->
+<!DOCTYPE html>
+<html lang="en">
 
-It can be used to add single as well as multi line comments. So, it is more convenient.
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function msg() {
+            var num,sq;
+            num=document.f1.n1.value;
+            sq=num*num;
+            alert("Square" + sq);
+        }
+    </script>
 
-It is represented by forward slash with asterisk then asterisk with forward slash. For example:
+</head>
 
-    /* your code here  */  
+<body>
+    <h1 align=center>Mkpits</h1>
+    <hr>
+    <center>
+        <fieldset>
+            <legend>Square Calculation</legend>
+            <form name="f1" style="width: 50%;">
+                Enter number <input type="text" name="n1">
+                <br><br>
+                <input type="text" value="click" onclick="msg();">
+            </form>
+        </fieldset>
+    </center>
+</body>
 
-It can be used before, after and middle of the statement.
-
-    <script>  
-    /* It is multi line comment.  
-    It will not be displayed */  
-    document.write("example of javascript multiline comment");  
-    </script>  
+</html>
