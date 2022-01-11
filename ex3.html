@@ -1,38 +1,21 @@
-JavaScript Single line Comment
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          function msg(){
+              var x=10;
+              var y=20;
+              var z=x+y;
+              document.write(z);
 
-It is represented by double forward slashes (//). It can be used before and after the statement.
-
-Let’s see the example of single-line comment i.e. added before the statement.
-
-    <script>  
-    // It is single line comment  
-    document.write("hello javascript");  
-    </script>  
-
-Test it Now
-
-Let’s see the example of single-line comment i.e. added after the statement.
-
-    <script>  
-    var a=10;  
-    var b=20;  
-    var c=a+b;//It adds values of a and b variable  
-    document.write(c);//prints sum of 10 and 20  
-    </script>  
-
-Test it Now
-JavaScript Multi line Comment
-
-It can be used to add single as well as multi line comments. So, it is more convenient.
-
-It is represented by forward slash with asterisk then asterisk with forward slash. For example:
-
-    /* your code here  */  
-
-It can be used before, after and middle of the statement.
-
-    <script>  
-    /* It is multi line comment.  
-    It will not be displayed */  
-    document.write("example of javascript multiline comment");  
-    </script>  
+          }
+    </script>
+</head>
+<body>
+    <input type="button" value="click" onclick="msg();">
+</body>
+</html>
