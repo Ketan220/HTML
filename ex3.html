@@ -1,3 +1,6 @@
+<!-- A JavaScript global variable is declared outside the function or declared with window object. It can be accessed from any function.
+
+Let’s see the simple example of global variable in JavaScript. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-          function msg(){
-              var x=10;
-              var y=20;
-              var z=x+y;
-              document.write(z);
+        var value=50; ;//global variable  
+         function m() {
+             alert(window.value);
+         }
 
-          }
+         function n(){
+             alert(window.value)
+         }
     </script>
 </head>
 <body>
-    <input type="button" value="click" onclick="msg();">
+    <script>
+        m();
+        n();
+    </script>
+    
 </body>
 </html>
