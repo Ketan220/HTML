@@ -1,30 +1,23 @@
-<!-- A JavaScript variable is simply a name of storage location. 
-There are two types of variables in JavaScript : local variable and global variable.
+<!-- JavaScript local variable
 
-Correct JavaScript variables
-    var x = 10;  
-    var _value="sonoo";  
-
-Incorrect JavaScript variables
-
-    var  123=30;  
-    var *aa=320;  
- -->
+A JavaScript local variable is declared inside block or function. It is accessible within the function or block only. For example: -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variable</title>
+    <title>Local Variable</title>
     <script>
-        function msg(){
-            var num=10;
-            alert("Num= "+num);
+        function abc(){
+         var x=10;  // Local Variable
+        alert("X="+x)
         }
     </script>
 </head>
 <body>
-    <input type="button" value="click" onclick="msg();">
+   <script>
+        abc();
+   </script>
 </body>
 </html>
