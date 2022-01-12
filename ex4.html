@@ -1,21 +1,31 @@
+<!-- Declaring JavaScript global variable within function
+
+To declare JavaScript global variables inside function, you need to use window object. For example:
+
+    window.value=90;  
+
+Now it can be declared inside any function and can be accessed from any function. For example: -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Global wiithin function</title>
     <script>
-          function msg(){
-              var x=10.2;
-              var y=20.4;
-              var z=x+y;
-              document.write(z);
-
-          }
+        function a() {
+            window.value=200; //declaring global variable by window object  
+        }
+        function b(){
+            alert(window.value); //accessing global variable from other function  
+        }
     </script>
 </head>
 <body>
-    <input type="button" value="click" onclick="msg();">
+    <script>
+        a();
+        b();
+    </script>
+    
 </body>
 </html>
