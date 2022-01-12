@@ -1,4 +1,6 @@
-<!-- Example to accept number from the user -->
+<!-- Internals of global variable in JavaScript
+
+When you declare a variable outside the function, it is added in the window object internally. You can access it through window object also. For example: -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function msg(){
-            var num,sq;
-            num=prompt("Enter the number"); //prompt is function to accept input from the user
-            sq=num*num;
-            alert("Square "+sq);
-        }
+        var value=50;  
+         function a(){  
+         alert(window.value);//accessing global variable   
+         }
     </script>
 </head>
 <body>
-    <input type="button" value="click" onclick="msg();">
-    
+    <script>
+        a();
+    </script>
 </body>
 </html>
