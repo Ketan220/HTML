@@ -1,23 +1,33 @@
-<!-- JavaScript local variable
+<!-- 
+JavaScript primitive data types
 
-A JavaScript local variable is declared inside block or function. It is accessible within the function or block only. For example: -->
+There are five types of primitive data types in JavaScript. They are as follows:
+Data Type	Description
+String	represents sequence of characters e.g. "hello"
+Number	represents numeric values e.g. 100
+Boolean	represents boolean value either false or true
+Undefined	represents undefined value
+Null	represents null i.e. no value at all -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Variable</title>
+    <title>Peimitive Data Type</title>
     <script>
-        function abc(){
-         var x=10;  // Local Variable
-        alert("X="+x)
-        }
+        var name="ketan";
+        document.write("Name="+name);
+        var num=10;
+        document.write("<br>Num="+num);
+        var name=true;
+        document.write("<br>name"+name);
+        var ch='+';
+        document.write("<br>Ch="+ch);
+
     </script>
 </head>
 <body>
-   <script>
-        abc();
-   </script>
+    
 </body>
 </html>
