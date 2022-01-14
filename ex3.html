@@ -1,4 +1,4 @@
-<!-- example 3 - wap to accept a number and print table of that number using for loop -->
+<!--  Sign up form -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,45 +9,63 @@
     <title>Document</title>
     <script>
         function msg() {
-            var num, result = 0;
-            var r = 0;
-            num = parseInt(document.f1.n1.value);
+            var uname, pass, result = 0, gender, h1, h2, ct;
+            uname = document.f1.n1.value;
+            pass = document.f1.n2.value;
+            gender = document.f1.m1.value;
+            h1 = document.f1.c1.value;
+            h2 = document.f1.c2.value;
+            ct = document.f1.city.value;
 
-            for (i = 0; i <= 10; i++) {
-                result = num * i;
 
-                if (r == 0) {
-                    r = num + " *" + i + "=" + result + "<br>";
-                }
-                else {
-                    r += num + " *" + i + "=" + result + "<br>";
-                }
-            }
-            document.getElementById("r1").innerHTML = r;
+            result = "User Details:" + "<br>";
+            result += "Username:" + uname + "<br>";
+            result += "Password:" + pass + "<br>";
+            result += "Gender:" + gender + " <br>";
+            result += "Hobby:" + h1 + "<br>";
+            result += "Hobby:" + h2 + "<br>";
+            result += "City:" + ct + "<br>";
+
+            document.getElementById("r1").innerHTML = result;
 
         }
+
     </script>
 </head>
 
 <body>
-    <h1 align=center>mkpits solution</h1>
+    <h1 align=center>MKPITS</h1>
     <hr>
     <center>
-        <form name="f1" style="width:50%">
-            <fieldset>
-                <legend> Table no. calculation </legend>
-                enter no <input type=text name="n1">
+        <fieldset>
+            <legend>sign up</legend>
+            <form name="f1" style="width:50%">
+                Username <input type="text" name="n1"> <span id="u1" style="color: red;">*</span>
+                <br><br>
+                Password <input type="password" name="n2"> <span id="u2" style="color: red;">*</span>
                 <br><br>
 
-                <input type=button value="click" onclick="msg();">
+                Gender <input type="radio" value="male" name="m1"> male
+                <input type="radio" value="female" name="m1">female
                 <br><br>
-                result :
-                <br>
-                <span id="r1" name="res"></span>
-            </fieldset>
-        </form>
+
+                Hobby <input type="checkbox" name="c1" value="Programming">programming
+                <input type="checkbox" name="c2" value="Finacing">Finacing
+                <br><br>
+
+                city <select name="city">
+                    <option value="nagpur">nagpur</option>
+                    <option value="mumbai">mumbai</option>
+                </select>
+                <br><br>
+
+                <input type="button" value="sign up" onclick="msg();">
+                <br><br>
+
+                <span id="r1" name="result"></span>
+            </form>
+        </fieldset>
     </center>
-
 </body>
 
 </html>
