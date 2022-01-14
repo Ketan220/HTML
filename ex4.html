@@ -1,31 +1,40 @@
-<!-- Declaring JavaScript global variable within function
-
-To declare JavaScript global variables inside function, you need to use window object. For example:
-
-    window.value=90;  
-
-Now it can be declared inside any function and can be accessed from any function. For example: -->
+<!-- Let’s see the example of if-else statement in JavaScript to find out the even or odd number and number given by the user. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global wiithin function</title>
+    <title>Document</title>
     <script>
-        function a() {
-            window.value=200; //declaring global variable by window object  
-        }
-        function b(){
-            alert(window.value); //accessing global variable from other function  
+        function msg (){
+            var num;
+            num=parseInt(document.f1.n1.value);
+            if(num%2==0)
+            {
+                document.getElementById("r1").innerHTML=" num is even";
+            }
+            else
+            {
+                document.getElementById("r1").innerHTML=" num is odd";
+            }
         }
     </script>
+
 </head>
 <body>
-    <script>
-        a();
-        b();
-    </script>
+    <center>
+        <fieldset>
+            <legend>Num given by user</legend>
+            <form name="f1" style="width: 50%;">
+                Enter number <input type="text" name="n1">
+                <br><br>
+                <input type="button" value="click" onclick="msg();" />
+                <br><br>
+                Iseven : <span id="r1" name="result"></span>
+            </form> 
+        </fieldset>
+    </center>
     
 </body>
 </html>
