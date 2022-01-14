@@ -1,4 +1,4 @@
-<!-- Example to accept number from the user -->
+<!-- Example to accept 2 no. and operator like +,-,* and display the result -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,27 +9,54 @@
     <title>Document</title>
     <script>
         function msg() {
-            var num;
-            num=document.f1.n1.value;
-            alert("Num" + num);
+            var num1, num2, result, op;
+            num1 = parseInt(document.f1.n1.value);
+            num2 = parseInt(document.f1.n2.value);
+            op = document.f1.n3.value;
+
+            if (op == '+') {
+                result = num1 + num2;
+            }
+
+            else if (op == '-') {
+                result = num1 - num2;
+            }
+
+            else if (op == '*') {
+                result = num1 * num2;
+            }
+
+            else {
+                alert("invalid operator");
+            }
+
+            document.getElementById("r1").innerHTML = result;
+
+
         }
     </script>
-
 </head>
 
 <body>
-    <h1 align=center>Mkpits</h1>
+    <h1 align=center>MKPITS</h1>
     <hr>
     <center>
         <fieldset>
-            <legend>Calculation</legend>
+            <legend>Number given by user</legend>
             <form name="f1" style="width: 50%;">
-                Enter number <input type="text" name="n1">
+                Enter number1 <input type="text" name="n1">
                 <br><br>
-                <input type="text" value="click" onclick="msg();">
+                Enter number2 <input type="tetx" name="n2">
+                <br><br>
+                Enter operator <input type="text" name="n3">
+                <br><br>
+                <input type="button" value="click" onclick="msg();">
+                <br><br>
+                result : <span id="r1" name="result"></span>
             </form>
         </fieldset>
     </center>
+
 </body>
 
 </html>
