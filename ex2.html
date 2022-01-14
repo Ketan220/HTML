@@ -1,35 +1,50 @@
-<!-- JavaScript If...else Statement
-
-It evaluates the content whether condition is true of false. The syntax of JavaScript if-else statement is given below.
-
-    if(expression){  
-    //content to be evaluated if condition is true  
-    }  
-    else{  
-    //content to be evaluated if condition is false  
-    }   -->
+<!-- Example to accept grade -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IF Else </title>
+    <title>Document</title>
     <script>
-        var a = 5;
-        if (a > 10) {
-            document.write("value of a is greater than 10");
-        }
-        else {
-            document.write("value of a is less than 10");
+        function msg() {
+            var grade,result;
+            grade=document.f1.n1.value;
+
+            switch(grade){
+                case 'A':
+                    result="grade A";
+                    break;
+                case 'B':
+                    result="grade B";
+                    break;
+                case 'C':
+                    result="grade c";
+                    break;
+                default:
+                    result = "N0 grade";
+            } 
+            document.getElementById("r1").innerHTML=result;
+
         }
     </script>
-
 </head>
-
 <body>
+    <h1 align=center>mkpits solution</h1>
+    <hr>
+    <center>
+        <form name="f1" style="width:50%">
+            <fieldset>
+            <legend>calculation </legend>
+                enter grade <input type=text name="n1" />
+                <br><br>
+
+                <input type=button value="result" onclick="msg();" />
+                <br><br>
+                Grade : <span id="r1" name="res"></span>
+            </fieldset>
+        </form>
+    </center>
 
 </body>
-
 </html>
