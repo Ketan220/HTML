@@ -1,4 +1,4 @@
-<!-- Let’s see the example of if-else statement in JavaScript to find out the even or odd number and number given by the user. -->
+<!-- example to accept 2 numbers and operator like +,-,* and display result using switch statement -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,34 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function msg (){
-            var num;
-            num=parseInt(document.f1.n1.value);
-            if(num%2==0)
-            {
-                document.getElementById("r1").innerHTML=" num is even";
-            }
-            else
-            {
-                document.getElementById("r1").innerHTML=" num is odd";
-            }
-        }
-    </script>
+        function msg() {
+              var n1,n2,op,result;
+              n1=parseFloat(document.f1.a.value);
+              n2=parseFloat(document.f1.b.value);
+              op=document.f1.c.value;
 
+              switch(op){
+                  case '+':
+                    result=n1+n2;
+                    break;
+                  case '-':
+                    result=n1-n2;
+                    break;
+                  case '*':
+                    result=n1*n2;
+                    break;
+                  case '/':
+                    result=n1/n2;
+                    break;
+                default:
+                    alert("invalid operator");
+                    break;
+              }
+              document.getElementById("r1").innerHTML=result;
+        }
+
+    </script>
 </head>
 <body>
+    <h1 align=center>mkpits solution</h1>
+    <hr>
     <center>
-        <fieldset>
-            <legend>Num given by user</legend>
-            <form name="f1" style="width: 50%;">
-                Enter number <input type="text" name="n1">
+        <form name="f1" style="width:50%">
+            <fieldset>
+            <legend>calculation </legend>
+                Enter number1 <input type=text name="a" />
                 <br><br>
-                <input type="button" value="click" onclick="msg();" />
+                Enter number2 <input type=text name="b" />
                 <br><br>
-                Iseven : <span id="r1" name="result"></span>
-            </form> 
-        </fieldset>
+                Enter Operator(+,-,*,/) <input type=text name="c" />
+                <br><br>
+
+                <input type=button value="Result" onclick="msg();" />
+                <br><br>
+                Calculation : <span id="r1" name="res"></span>
+            </fieldset>
+        </form>
     </center>
-    
 </body>
 </html>
