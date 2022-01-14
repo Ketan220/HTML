@@ -1,7 +1,6 @@
-<!-- 2- wap to accept 3 numbers and display the Smallest number -->
+<!-- assignment : wap to accept a number and print factorial using do while loop. -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,56 +8,30 @@
     <title>Document</title>
     <script>
         function msg() {
-            var num1, num2,num3,max;
-            num1 = parseInt("document.f1.n1.value");
-            num2 = parseInt("document.f1.n2.value");
-            num3 = parseInt("document.f1.n3.value");
-         
-            if(num1<num2 & num1<num3)
-            {
-                max=num1;
-              
-
-            }
-            else if(num2<num1 && num2<num3)
-            {
-                 max=num2;
-                
-            }
-            else if( num3<num1 && num3<num2)
-            {
-                max=num3;
-            }
-            else
-            {
-                alert("Invalid operator");             
-            }
-            document.getElementById("r1").innerHTML=max;
-           
-            
-
+            var num,fact=1;
+            num=parseInt(document.f1.n1.value)
+            i=num;
+            do{
+                fact=fact*i;
+                i--;
+            }while(i>0)
+            document.getElementById("r1").innerHTML=fact;
         }
     </script>
 </head>
-
 <body>
     <center>
-        <fieldset>
-            <form name="f1" style="width: 50%;">
-                Enter number1 <input type="text" name="n1">
-                <br><br>
-                Enter number2 <input type="text" name="n2">
-                <br><br>
-                Enter number3 <input type="text" name="n3">
+        <form name="f1" style="width:50%">
+            <fieldset>
+                <legend> Table no. calculation </legend>
+                enter no <input type=text name="n1">
                 <br><br>
 
-                <input type="button" value="click" onclick="msg();">
+                <input type=button value="click" onclick="msg();">
                 <br><br>
-                Smallest : <span id="r1" name="res"></span>
-            </form>
-        </fieldset>
+                Factorial :  <span id="r1" name="res"></span>
+            </fieldset>
+        </form>
     </center>
-
 </body>
-
 </html>
