@@ -1,4 +1,4 @@
-<!-- wap to accept radius of a circle and then print area and circ of a circle -->
+<!-- wap to accept 3 subject marks and display total, percentage and grade. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,32 +8,46 @@
     <title>Document</title>
     <script>
         function msg() {
-            var circle,circum,r;
-            r=parseFloat(document.f1.n1.value);
-            circle=3.14*r*r;
-            circum=2*3.14*r;
-            document.getElementById("result1").innerHTML=circle;
-            document.getElementById("result2").innerHTML=circum;
-            alert("Area of circle"+circle);
-            alert("Area of circum"+circum);
+            var m1,m2,m3,per,grade,total;
+            m1=parseInt(document.f1.a.value);
+            m2=parseInt(document.f1.b.value);
+            m3=parseInt(document.f1.c.value);
+            
+            total=m1+m2+m3;
+            per=(m1+m2+m3)/300;
+            grade="A";
+            
+            if(m1>=40 && m2>=40 && m1>=40)
+            {
+                  
+            
+                document.getElementById("r1").innerHTML="total";
+                document.getElementById("r1").innerHTML="per";
+                document.getElementById("r1").innerHTML="grade";
+            }
+            else
+            {
+                document.getElementById("r1").innerHTML="Sorry!You have failed";
+            }
+
+
         }
     </script>
 </head>
 <body>
-    <h1 align=center>MKPITS</h1>
-    <hr>
     <center>
         <fieldset>
-            <legend>Find Area of circlr and circum</legend>
             <form name="f1" style="width: 50%;">
-            Enter radius <input type="text" name="n1">
-            <br><br>
+                Enter number1 <input type="text" name="a">
+                <br><br>
+                Enter number2 <input type="text" name="b">
+                <br><br>
+                Enter number3  <input type="text" name="c">
+                <br><br>
 
-            <input type="button" value="click" onclick="msg();">
-            <br><br>
-
-            Area of circle: <span id="result1" name="result1"></span>
-            Area of circ: <span id="result2" name="result2"></span>
+                <input type="button" value="click" onclick="msg();">
+                <br><br>
+                Status : <span id="r1" name="res"></span>
             </form>
         </fieldset>
     </center>
