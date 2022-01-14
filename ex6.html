@@ -1,62 +1,52 @@
-<!-- Example to accept 2 no. and operator like +,-,* and display the result -->
+<!-- example 3 - wap to accept a number and print table of that number using while loop -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function msg() {
-            var num1, num2, result, op;
-            num1 = parseInt(document.f1.n1.value);
-            num2 = parseInt(document.f1.n2.value);
-            op = document.f1.n3.value;
+        function msg(){
+            var r=0,result=0,num,i=1;
+            num=parseInt(document.f1.n1.value);
 
-            if (op == '+') {
-                result = num1 + num2;
+            while(i<10)
+            {   
+                result=num*i;
+                if(r==0)
+                {
+                    r=num+"*"+i+"="+result+"<br>";
+                }
+                else
+                {
+                    r +=num+"*"+i+"="+result+"<br>";
+                }
+                i++;
             }
-
-            else if (op == '-') {
-                result = num1 - num2;
-            }
-
-            else if (op == '*') {
-                result = num1 * num2;
-            }
-
-            else {
-                alert("invalid operator");
-            }
-
-            document.getElementById("r1").innerHTML = result;
-
+            document.getElementById("r1").innerHTML=r;
 
         }
     </script>
 </head>
-
 <body>
-    <h1 align=center>MKPITS</h1>
+    <h1 align=center>mkpits solution</h1>
     <hr>
     <center>
-        <fieldset>
-            <legend>Number given by user</legend>
-            <form name="f1" style="width: 50%;">
-                Enter number1 <input type="text" name="n1">
+        <form name="f1" style="width:50%">
+            <fieldset>
+                <legend> Table no. calculation </legend>
+                enter no <input type=text name="n1">
                 <br><br>
-                Enter number2 <input type="tetx" name="n2">
+
+                <input type=button value="click" onclick="msg();">
                 <br><br>
-                Enter operator <input type="text" name="n3">
-                <br><br>
-                <input type="button" value="click" onclick="msg();">
-                <br><br>
-                result : <span id="r1" name="result"></span>
-            </form>
-        </fieldset>
+                Table :
+                <br>
+                <span id="r1" name="res"></span>
+            </fieldset>
+        </form>
     </center>
 
 </body>
-
 </html>
