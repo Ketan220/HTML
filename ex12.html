@@ -1,42 +1,39 @@
-<!-- wap to accept length and breadth and then display area  -->
+<!-- wap to accept age from the user and display whether he is eligible to vote or not. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area</title>
+    <title>Document</title>
     <script>
-        function msg() {
-            var len,bre,area;
-            len=parseFloat(document.f1.n1.value);
-            bre=parseFloat(document.f1.n2.value);
-            area=len*bre;
-            document.getElementById("result").innerHTML=area;
-            alert("Area="+area);
-        }
+        function msg(){
+            var n1,result;
+            n1=parseInt(document.f1.a.value);
 
+            if(n1>=21)
+            {
+                document.getElementById("r1").innerHTML="It is eligible by votting";
+            }
+            else
+            {
+                document.getElementById("r1").innerHTML="It is not eligible by votting"; 
+            }
+        }
     </script>
 </head>
 <body>
-    <h1 align=center>Ketan</h1>
+    <h1 align=center>MKPITS</h1>
     <hr>
     <center>
         <fieldset>
-            <legend>Find area</legend>
             <form name="f1" style="width: 50%;">
-            Enter number1 <input type="text" name="n1">
-            <br><br>
-            
-            Enter number2 <input type="text" name="n2">
-            <br><br>
+                Enter Age <input type="text" name="a">
+                <br><br>
 
-            <input type="button" value="click" onclick="msg();">
-            <br><br>
-
-            Area: <span id="result" name="result"></span>
-            
-            
+                <input type="button" value="click" onclick="msg();" />
+                <br><br>
+                Voting Status : <span id="r1" name="res"></span>
             </form>
         </fieldset>
     </center>
