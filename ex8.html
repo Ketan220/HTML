@@ -1,24 +1,28 @@
-<!-- External JavaScript file
+<!-- 3) JavaScript do while loop
 
-We can create external JavaScript file and embed it in many html page.
+The JavaScript do while loop iterates the elements for the infinite number of times like while loop. But, code is executed at least once whether condition is true or false. The syntax of do while loop is given below.
 
-It provides code re usability because single JavaScript file can be used in several html pages.
-
-An external JavaScript file must be saved by .js extension. It is recommended to embed all JavaScript files into a single file. It increases the speed of the webpage. -->
+    do{  
+        code to be executed  
+    }while (condition);   -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>External Js</title>
-    <script  type="text/javascript" src="ex8.js"></script>
+    <title>Do while</title>
+    <script>
+        var i=1;
+        do{
+            document.write(i+"<br>");
+            i++
+        }while(i<=5)
+
+    </script>
 </head>
 <body>
-    <h1>MKPITS</h1>
-    <input type="button" value="click" onclick="msg();">
-    <br><br>
-    <input type="button" value="click" onclick="display();">
     
 </body>
 </html>
+
