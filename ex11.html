@@ -1,4 +1,4 @@
-<!-- 5- wap to accept age from the user and display whether he is minor, adult or old. -->
+<!-- wap to print even no between 2 to 100  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,45 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function msg() {
-            var n1;
-            n1=parseInt(document.f1.a.value);
-            if(n1<18)
-            {
-                document.getElementById("r1").innerHTML="Minor";
+            var i=1;
+            for(i=2;i<=100;i++)
+            {  
+               if(i%2==0)
+               {
+                document.write("Even no");
+                document.write(i+ "<br>");
+               }
             }
-            else if (n1>18) 
-            {
-                document.getElementById("r1").innerHTML="Adult";
-            }
-            else if(n1>50)
-            {
-                document.getElementById("r1").innerHTML="Old";
-            }
-            else 
-            {
-                document.getElementById("r1").innerHTML="Inavlid age";
-            }
-       
-
-           
-        }
+        
     </script>
 </head>
 <body>
-    <h1 align=center>MKPITS</h1>
-    <hr>
-    <center>
-        <fieldset>
-            <form name="f1" style="width: 50%;">
-                Enter Age <input type="text" name="a">
-                <br><br>
-
-                <input type="button" value="click" onclick="msg();" />
-                <br><br>
-                Status : <span id="r1" name="res"></span>
-            </form>
-        </fieldset>
-    </center>
-</body>
 </html>
