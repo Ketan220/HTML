@@ -1,50 +1,26 @@
-<!-- The JavaScript switch statement is used to execute one code from multiple expressions. It is just like else if statement that we have learned in previous page. But it is convenient than if..else..if because it can be used with numbers, characters etc.
+<!-- 1) JavaScript For loop
 
-The signature of JavaScript switch statement is given below.
+The JavaScript for loop iterates the elements for the fixed number of times. It should be used if number of iteration is known. The syntax of for loop is given below.
 
-    switch(expression){  
-    case value1:  
-     code to be executed;  
-     break;  
-    case value2:  
-     code to be executed;  
-     break;  
-    ......  
-      
-    default:   
-     code to be executed if above values are not matched;  
+    for (initialization; condition; increment)  
+    {  
+        code to be executed  
     }   -->
-
-<!-- Let’s see the simple example of switch statement in javascript. -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>For loop</title>
     <script>
-        var grade = 'C';
-        var result;
-        switch (grade) {
-            case 'A':
-                result = "grade A";
-                break;
-            case 'B':
-                result = "grade B";
-                break;
-            case 'C':
-                result = "grade C";
-                break;
-            default:
-                result = "N0 grade";
+        for(i=1;i<=10;i++)
+        {
+            document.write(i+"<br>");
         }
-        document.write(result);
     </script>
 </head>
-
 <body>
+    
 </body>
-
 </html>
