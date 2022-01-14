@@ -1,36 +1,64 @@
+<!-- 2- wap to accept 3 numbers and display the greatest number -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function msg(){
-            var num,square;
-            num=document.f1.n1.value;
-            square=num*num;
-            document.getElementById("result").innerHTML=square;
-            alert("Square="+sq);
+        function msg() {
+            var num1, num2,num3,max;
+            num1 = parseInt("document.f1.n1.value");
+            num2 = parseInt("document.f1.n2.value");
+            num3 = parseInt("document.f1.n3.value");
+         
+            if(num1>num2 & num1>num3)
+            {
+                max=num1;
+              
 
+            }
+            else if(num2>num1 && num2>num3)
+            {
+                 max=num2;
+                
+            }
+            else if( num3>num1 && num3>num2)
+            {
+                max=num3;
+            }
+            else
+            {
+                alert("Invalid operator");             
+            }
+            document.getElementById("r1").innerHTML=max;
+           
+            
 
         }
     </script>
 </head>
+
 <body>
-    <h1 align=center>Mkpits</h1>
-    <hr>
     <center>
         <fieldset>
-            <legend>Calculation in front screen </legend>
             <form name="f1" style="width: 50%;">
-                 Enter number <input type="text" name="n1">
-                 <br><br>
-                 <input type="button" value="click" onclick="msg();">
-                 <br><br>
-                 square : <span id="result" name="result" ></span>
+                Enter number1 <input type="text" name="n1">
+                <br><br>
+                Enter number2 <input type="text" name="n2">
+                <br><br>
+                Enter number3 <input type="text" name="n3">
+                <br><br>
+
+                <input type="button" value="click" onclick="msg();">
+                <br><br>
+                Greatest : <span id="r1" name="res"></span>
             </form>
         </fieldset>
     </center>
+
 </body>
+
 </html>
