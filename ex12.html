@@ -1,4 +1,4 @@
-<!-- wap to accept age from the user and display whether he is eligible to vote or not. -->
+<!-- wap to print odd no between 2 to 100  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,35 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function msg(){
-            var n1,result;
-            n1=parseInt(document.f1.a.value);
-
-            if(n1>=21)
-            {
-                document.getElementById("r1").innerHTML="It is eligible by votting";
+            var i=1;
+            for(i=2;i<=100;i++)
+            {  
+               if(i%2!=0)
+               {
+                document.write("Odd no");
+                document.write(i+ "<br>");
+               }
             }
-            else
-            {
-                document.getElementById("r1").innerHTML="It is not eligible by votting"; 
-            }
-        }
+        
     </script>
 </head>
 <body>
-    <h1 align=center>MKPITS</h1>
-    <hr>
-    <center>
-        <fieldset>
-            <form name="f1" style="width: 50%;">
-                Enter Age <input type="text" name="a">
-                <br><br>
-
-                <input type="button" value="click" onclick="msg();" />
-                <br><br>
-                Voting Status : <span id="r1" name="res"></span>
-            </form>
-        </fieldset>
-    </center>
-</body>
 </html>
