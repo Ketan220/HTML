@@ -1,59 +1,30 @@
-<!-- example to accept 2 numbers and operator like +,-,* and display result using switch statement -->
+<!-- 2) JavaScript while loop
+
+The JavaScript while loop iterates the elements for the infinite number of times. It should be used if number of iteration is not known. The syntax of while loop is given below.
+
+    while (condition)  
+    {  
+        code to be executed  
+    }   -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>While Loop</title>
     <script>
-        function msg() {
-              var n1,n2,op,result;
-              n1=parseFloat(document.f1.a.value);
-              n2=parseFloat(document.f1.b.value);
-              op=document.f1.c.value;
-
-              switch(op){
-                  case '+':
-                    result=n1+n2;
-                    break;
-                  case '-':
-                    result=n1-n2;
-                    break;
-                  case '*':
-                    result=n1*n2;
-                    break;
-                  case '/':
-                    result=n1/n2;
-                    break;
-                default:
-                    alert("invalid operator");
-                    break;
-              }
-              document.getElementById("r1").innerHTML=result;
+        var i = 11;
+        while (i <= 15) {
+            document.write(i + "<br>");
+            i++;
         }
-
     </script>
 </head>
-<body>
-    <h1 align=center>mkpits solution</h1>
-    <hr>
-    <center>
-        <form name="f1" style="width:50%">
-            <fieldset>
-            <legend>calculation </legend>
-                Enter number1 <input type=text name="a" />
-                <br><br>
-                Enter number2 <input type=text name="b" />
-                <br><br>
-                Enter Operator(+,-,*,/) <input type=text name="c" />
-                <br><br>
 
-                <input type=button value="Result" onclick="msg();" />
-                <br><br>
-                Calculation : <span id="r1" name="res"></span>
-            </fieldset>
-        </form>
-    </center>
+<body>
+
 </body>
+
 </html>
