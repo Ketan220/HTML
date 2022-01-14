@@ -1,19 +1,6 @@
-<!-- JavaScript If...else if statement
+<!-- The switch statement is fall-through i.e. all the cases will be evaluated if you don't use break statement.
 
-It evaluates the content only if expression is true from several expressions. The signature of JavaScript if else if statement is given below.
-
-    if(expression1){  
-    //content to be evaluated if expression1 is true  
-    }  
-    else if(expression2){  
-    //content to be evaluated if expression2 is true  
-    }  
-    else if(expression3){  
-    //content to be evaluated if expression3 is true  
-    }  
-    else{  
-    //content to be evaluated if no expression is true  
-    }   -->
+Let’s understand the behaviour of switch statement in JavaScript. -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,19 +10,19 @@ It evaluates the content only if expression is true from several expressions. Th
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var a = 15;
-        if (a == 10) {
-            document.write("a is equal to 10");
+        var grade = 'B';
+        var result;
+        switch (grade) {
+            case 'A':
+                result += " A Grade";
+            case 'B':
+                result += " B Grade";
+            case 'C':
+                result += " C Grade";
+            default:
+                result += " No Grade";
         }
-        else if (a == 15) {
-            document.write("a is equal to 15");
-        }
-        else if (a == 20) {
-            document.write("a is equal to 20");
-        }
-        else {
-            document.write("a is not equal to 10, 15 or 20");
-        }  
+        document.write(result);  
     </script>
 
 </head>
