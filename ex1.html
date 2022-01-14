@@ -1,25 +1,50 @@
-<!-- JavaScript If statement
+<!-- The JavaScript switch statement is used to execute one code from multiple expressions. It is just like else if statement that we have learned in previous page. But it is convenient than if..else..if because it can be used with numbers, characters etc.
 
-It evaluates the content only if expression is true. The signature of JavaScript if statement is given below.
+The signature of JavaScript switch statement is given below.
 
-    if(expression){  
-    //content to be evaluated  
+    switch(expression){  
+    case value1:  
+     code to be executed;  
+     break;  
+    case value2:  
+     code to be executed;  
+     break;  
+    ......  
+      
+    default:   
+     code to be executed if above values are not matched;  
     }   -->
+
+<!-- Let’s see the simple example of switch statement in javascript. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>If Statement</title>
+    <title>Document</title>
     <script>
-         var a=10;
-         if(a>10) {
-             document.write("The value a is greater than 10");
-         }
+        var grade = 'C';
+        var result;
+        switch (grade) {
+            case 'A':
+                result = "grade A";
+                break;
+            case 'B':
+                result = "grade B";
+                break;
+            case 'C':
+                result = "grade C";
+                break;
+            default:
+                result = "N0 grade";
+        }
+        document.write(result);
     </script>
 </head>
+
 <body>
-    
 </body>
+
 </html>
