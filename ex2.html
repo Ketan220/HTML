@@ -1,65 +1,18 @@
-<!-- form validation (checking username and password entered or not ) -->
+<!-- We can call function by passing arguments. Let’s see the example of function that has one argument. -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function msg() {
-            var uname, pass;
-            uname = document.f1.n1.value;
-            pass = document.f1.n2.value;
-            if (uname == "")
-            {
-                document.getElementById("u1").innerHTML = "username cannot be blank";
-            }
-            else 
-            {
-               
-                document.getElementById("u1").innerHTML="";
-                if (pass == "") 
-                {
-                    document.getElementById("u2").innerHTML = "password cannot blank";
-                }
-                else 
-                {
-                    document.getElementById("u2").innerHTML="";
-                    if (uname == "admin" && pass == "admin") 
-                    {
-                        document.getElementById("r1").innerHTML = "Login Suceesfully";
-                    }
-                    else 
-                    {
-                        document.getElementById("r1").innerHTML = "Invalid Creditials,try again";
-                    }
-
-                }
-            }
+    <script >
+        function getcube(number) {
+            alert(number*number*number);
         }
     </script>
 </head>
-
 <body>
-    <h1 align=center>MKPITS</h1>
-    <hr>
-    <center>
-        <fieldset>
-            <legend>sign in</legend>
-            <form name="f1" style="width:50%">
-                Username <input type="text" name="n1"> <span id="u1" style="color: red;">*</span>
-                <br><br>
-                Password <input type="password" name="n2"> <span id="u2" style="color: red;">*</span>
-                <br><br>
-                <input type="button" value="sign in" onclick="msg();">
-                <br><br>
-                Status: <span id="r1" name="result"></span>
-            </form>
-        </fieldset>
-    </center>
-
+    <input type="button" value="click" onclick="getcube(4);">
 </body>
-
 </html>
