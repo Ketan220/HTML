@@ -1,38 +1,20 @@
-<!-- JavaScript Functions
+JavaScript Function Object
 
-JavaScript functions are used to perform operations. We can call JavaScript function many times to reuse the code.
-Advantage of JavaScript function
+In JavaScript, the purpose of Function constructor is to create a new Function object. It executes the code globally. However, if we call the constructor directly, a function is created dynamically but in an unsecured way.
+Syntax
 
-There are mainly two advantages of JavaScript functions.
+    new Function ([arg1[, arg2[, ....argn]],] functionBody)  
 
-    Code reusability: We can call a function several times so it save coding.
-    Less coding: It makes our program compact. We don’t need to write many lines of code each time to perform a common task.
+Parameter
 
-JavaScript Function Syntax
+arg1, arg2, .... , argn - It represents the argument used by function.
 
-The syntax of declaring function is given below.
+functionBody - It represents the function definition.
+JavaScript Function Methods
 
-    function functionName([arg1, arg2, ...argN]){  
-     //code to be executed  
-    }  
-
-JavaScript Functions can have 0 or more arguments. 
-
-Let’s see the simple example of function in JavaScript that does not has arguments.-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script >
-          function msg(){
-              alert("Hello Everybody");
-          }
-    </script>
-</head>
-<body>
-    <input type="button" value="callfunction" onclick="msg();">
-</body>
-</html>
+Let's see function methods with description.
+Method 	Description
+apply() 	It is used to call a function contains this value and a single array of arguments.
+bind() 	It is used to create a new function.
+call() 	It is used to call a function contains this value and an argument list.
+toString() 	It returns the result in a form of a string.
