@@ -1,4 +1,10 @@
-<!-- assignment : wap to accept a number and print factorial using do while loop. -->
+<!-- 3) By using an Object constructor
+
+Here, you need to create function with arguments. Each argument value can be assigned in the current object by using this keyword.
+
+The this keyword refers to the current object.
+
+The example of creating object by object constructor is given below. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,32 +12,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function msg() {
-            var num,fact=1;
-            num=parseInt(document.f1.n1.value)
-            i=num;
-            do{
-                fact=fact*i;
-                i--;
-            }while(i>0)
-            document.getElementById("r1").innerHTML=fact;
-        }
-    </script>
+    <script>  
+        function emp(id,name,salary){  
+        this.id=id;  
+        this.name=name;  
+        this.salary=salary;  
+        }  
+        e=new emp(103,"Vimal Jaiswal",30000);  
+          
+        document.write(e.id+" "+e.name+" "+e.salary);  
+    </script>      
 </head>
 <body>
-    <center>
-        <form name="f1" style="width:50%">
-            <fieldset>
-                <legend> Table no. calculation </legend>
-                enter no <input type=text name="n1">
-                <br><br>
-
-                <input type=button value="click" onclick="msg();">
-                <br><br>
-                Factorial :  <span id="r1" name="res"></span>
-            </fieldset>
-        </form>
-    </center>
+    
 </body>
 </html>
