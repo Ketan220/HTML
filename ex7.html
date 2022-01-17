@@ -1,4 +1,4 @@
-<!-- example of function calling another function and returning value -->
+<!-- example object in form -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,33 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function gettotal(m1,m2,m3) {
-            var total=parseInt(m1)+parseInt(m2)+parseInt(m3);
-            return total;
-        }
-
-        function getper(total){
-            var per=(total/300.0)*100.0;
-            return per;
-        }
-
-        function msg(m1,m2,m3) {
-               var tot=gettotal(m1,m2,m3);
-               document.getElementById("r1").innerHTML=tot;
-               var percentage=getper(tot);
-               document.getElementById("r2").innerHTML=percentage;
+        function getresult() {
+            emp={no:123,name:"paritosh",salry: 25000};
+            document.getElementById("r1").innerHTML=emp.no;
+            document.getElementById("r2").innerHTML=emp.name;
+            document.getElementById("r3").innerHTML=emp.salary;
         }
     </script>
 </head>
 <body>
-    <form name="f1" >
-        Enter marks1 <input type="text" name="t1"> <br><br>
-        Enter marks2 <input type="text" name="t2"> <br><br>
-        Enter marks3 <input type="text" name="t3"> <br><br>
-        <input type="button" value="click" onclick="msg(document.f1.t1.value,document.f1.t2.value,document.f1.t3.value);">
+    <form name="f1">
+        Enter empno. <input type="text" name="t1">
         <br><br>
-        Total Marks: <span id="r1"></span>
+        Enter empname <input type="text" name="t2">
         <br><br>
-        percentage: <span id="r2"></span>
+        Enter empsalary <input type="text" name="t3">
+        <br><br>
+
+        <input type="button" value="click" onclick="getresult(document.f1.t1.value,document.f1.t2.value,document.f1.t3.value);">
+        <br><br>
+        
+        Empno. :<span id="r1"></span>
+        <br><br>
+        Empname :<span id="r2"></span>
+        <br><br>
+        Empsalary :<span id="r3"></span>
+    </form>
 </body>
 </html>
