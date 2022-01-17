@@ -1,4 +1,4 @@
-<!-- example to print table using do while loop -->
+<!--  Example of object in form -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,42 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function msg() {
-            var num,r=0,result=0,i=1;
-            num=parseInt(document.f1.n1.value);
-            do{
-                result=num*i;
-                if(r==0)
-                {
-                    r=num+"*"+i+"="+result+"<br>";
-                }
-                else
-                {
-                    r +=num+"*"+i+"="+result+"<br>";
-                }
-                i++;
-            }while(i<10)
-            document.getElementById("r1").innerHTML=r;
-        }
+        function getresult(m1,m2,m3) {
+            var emp=new Object();
+            emp.empno=m1;
+	        emp.name=m2;
+	        emp.salary=m3;
+
+            document.getElementById("r1").innerHTML=emp.empno;
+	        document.getElementById("r2").innerHTML=emp.name;
+         	document.getElementById("r3").innerHTML=emp.salary;
+        } 
     </script>
 </head>
 <body>
-    <h1 align=center>mkpits solution</h1>
-    <hr>
-    <center>
-        <form name="f1" style="width:50%">
-            <fieldset>
-                <legend> Table no. calculation </legend>
-                enter no <input type=text name="n1">
-                <br><br>
+    <form name="f1">
+        Enter empno. <input type="text" name="t1">
+        <br><br>
+        Enter empname <input type="text" name="t2">
+        <br><br>
+        Enter empsalary <input type="text" name="t3">
+        <br><br>
 
-                <input type=button value="click" onclick="msg();">
-                <br><br>
-                Table :
-                <br>
-                <span id="r1" name="res"></span>
-            </fieldset>
-        </form>
-    </center>
+        <input type="button" value="click" onclick="getresult(document.f1.t1.value,document.f1.t2.value,document.f1.t3.value)" >
+        <br><br>
+        
+        Empno. :<span id="r1"></span>
+        <br><br>
+        Empname :<span id="r2"></span>
+        <br><br>
+        Empsalary :<span id="r3"></span>
 </body>
 </html>
