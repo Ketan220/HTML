@@ -1,4 +1,6 @@
-<!-- We can call function by passing arguments. Let’s see the example of function that has one argument. -->
+<!-- Example 1
+
+Let's see an example to display the sum of given numbers. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script >
-        function getcube(number) {
-            alert(number*number*number);
-        }
+    <script>
+        var add=new Function("num1","num2","return num1+num2");
+        document.writeln(add(2,3));
     </script>
 </head>
 <body>
-    <input type="button" value="click" onclick="getcube(4);">
+    
 </body>
 </html>
