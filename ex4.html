@@ -1,30 +1,31 @@
-<!-- 2) JavaScript while loop
-
-The JavaScript while loop iterates the elements for the infinite number of times. It should be used if number of iteration is not known. The syntax of while loop is given below.
-
-    while (condition)  
-    {  
-        code to be executed  
-    }   -->
+<!-- Another Example -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>While Loop</title>
-    <script>
-        var i = 11;
-        while (i <= 15) {
-            document.write(i + "<br>");
-            i++;
+    <title>Document</title>
+    <script >
+        function msg (m1,m2,m3) {
+            var total=parseInt(m1)+parseInt(m2)+parseInt(m3);
+            document.getElementById("r1").innerHTML=total;
+            var per=(total/300.0)*100.0;
+            document.getElementById("r2").innerHTML=per;
+
         }
     </script>
 </head>
-
 <body>
-
+    <form name="f1" >
+        Enter marks1 <input type="text" name="t1"> <br><br>
+        Enter marks2 <input type="text" name="t2"> <br><br>
+        Enter marks3 <input type="text" name="t3"> <br><br>
+        <input type="button" value="click" onclick="msg(document.f1.t1.value,document.f1.t2.value,document.f1.t3.value);">
+        <br><br>
+        Total Marks: <span id="r1"></span>
+        <br><br>
+        percentage: <span id="r2"></span>
+    </form>
 </body>
-
 </html>
