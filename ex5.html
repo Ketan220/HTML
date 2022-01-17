@@ -1,34 +1,22 @@
-<!-- The switch statement is fall-through i.e. all the cases will be evaluated if you don't use break statement.
+<!-- Function with Return Value
 
-Let’s understand the behaviour of switch statement in JavaScript. -->
+We can call function that returns a value and use it in our program. Let’s see the example of function that returns value. -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        var grade = 'B';
-        var result;
-        switch (grade) {
-            case 'A':
-                result += " A Grade";
-            case 'B':
-                result += " B Grade";
-            case 'C':
-                result += " C Grade";
-            default:
-                result += " No Grade";
+    <script >
+        function getinfo() {
+            return "hello ! How r u?";  
         }
-        document.write(result);  
     </script>
-
 </head>
-
 <body>
-
+    <script>
+        document.write(getinfo());
+    </script>
 </body>
-
 </html>
