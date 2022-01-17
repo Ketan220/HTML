@@ -1,71 +1,22 @@
-<!--  Sign up form -->
+<!-- example of accepting value from the user and passing to function -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function msg() {
-            var uname, pass, result = 0, gender, h1, h2, ct;
-            uname = document.f1.n1.value;
-            pass = document.f1.n2.value;
-            gender = document.f1.m1.value;
-            h1 = document.f1.c1.value;
-            h2 = document.f1.c2.value;
-            ct = document.f1.city.value;
-
-
-            result = "User Details:" + "<br>";
-            result += "Username:" + uname + "<br>";
-            result += "Password:" + pass + "<br>";
-            result += "Gender:" + gender + " <br>";
-            result += "Hobby:" + h1 + "<br>";
-            result += "Hobby:" + h2 + "<br>";
-            result += "City:" + ct + "<br>";
-
-            document.getElementById("r1").innerHTML = result;
-
+    <script >
+        function getcube(number) {
+            alert(number*number*number);
         }
-
     </script>
 </head>
-
 <body>
-    <h1 align=center>MKPITS</h1>
-    <hr>
-    <center>
-        <fieldset>
-            <legend>sign up</legend>
-            <form name="f1" style="width:50%">
-                Username <input type="text" name="n1"> <span id="u1" style="color: red;">*</span>
-                <br><br>
-                Password <input type="password" name="n2"> <span id="u2" style="color: red;">*</span>
-                <br><br>
-
-                Gender <input type="radio" value="male" name="m1"> male
-                <input type="radio" value="female" name="m1">female
-                <br><br>
-
-                Hobby <input type="checkbox" name="c1" value="Programming">programming
-                <input type="checkbox" name="c2" value="Finacing">Finacing
-                <br><br>
-
-                city <select name="city">
-                    <option value="nagpur">nagpur</option>
-                    <option value="mumbai">mumbai</option>
-                </select>
-                <br><br>
-
-                <input type="button" value="sign up" onclick="msg();">
-                <br><br>
-
-                <span id="r1" name="result"></span>
-            </form>
-        </fieldset>
-    </center>
+    <form name="f1">
+        Enter number <input type="text" name="n1">
+        <br><br>
+        <input type="button" value="click" onclick="getcube(document.f1.n1.value);">
+    </form>
 </body>
-
 </html>
