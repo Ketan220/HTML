@@ -1,28 +1,30 @@
-<!-- 3) JavaScript do while loop
+<!-- 
+2) By creating instance of Object
 
-The JavaScript do while loop iterates the elements for the infinite number of times like while loop. But, code is executed at least once whether condition is true or false. The syntax of do while loop is given below.
+The syntax of creating object directly is given below:
 
-    do{  
-        code to be executed  
-    }while (condition);   -->
+    var objectname=new Object();  
+
+Here, new keyword is used to create object.
+
+Let’s see the example of creating object directly. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do while</title>
-    <script>
-        var i=1;
-        do{
-            document.write(i+"<br>");
-            i++
-        }while(i<=5)
-
-    </script>
+    <title>Document</title>
+    <script>  
+        var emp=new Object();  
+        emp.id=101;  
+        emp.name="Ravi Malik";  
+        emp.salary=50000;  
+        document.write(emp.id+" "+emp.name+" "+emp.salary);  
+    </script>  
+    
 </head>
 <body>
     
 </body>
 </html>
-
