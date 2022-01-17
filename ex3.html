@@ -1,22 +1,24 @@
-<!-- example of accepting value from the user and passing to function -->
+<!-- Example 2
+
+Let's see an example to display the power of provided value. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script >
-        function getcube(number) {
-            alert(number*number*number);
-        }
+    <script>
+        var pow = new Function("num1", "num2", "return Math.pow(num1,num2)");
+        document.writeln(pow(2, 3));
+        alert("power " + pow(2, 3));
     </script>
+
 </head>
+
 <body>
-    <form name="f1">
-        Enter number <input type="text" name="n1">
-        <br><br>
-        <input type="button" value="click" onclick="getcube(document.f1.n1.value);">
-    </form>
+
 </body>
+
 </html>
