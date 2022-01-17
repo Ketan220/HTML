@@ -1,4 +1,8 @@
-<!-- wap to print even no between 2 to 100  -->
+<!-- Defining method in JavaScript Object
+
+We can define method in JavaScript object. But before defining method, we need to add property in the function with same name as method.
+
+The example of defining method in object is given below. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +10,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-            var i=1;
-            for(i=2;i<=100;i++)
-            {  
-               if(i%2==0)
-               {
-                document.write("Even no");
-                document.write(i+ "<br>");
-               }
-            }
-        
-    </script>
+    <script>  
+        function emp(id,name,salary){  
+        this.id=id;  
+        this.name=name;  
+        this.salary=salary;  
+          
+        this.changeSalary=changeSalary; 
+
+        function changeSalary(otherSalary){  
+        this.salary=otherSalary;  
+        }
+
+        }  
+
+        e=new emp(103,"Sonoo Jaiswal",30000);  
+        document.write(e.id+" "+e.name+" "+e.salary); 
+         
+        e.changeSalary(45000);  
+        document.write("<br>"+e.id+" "+e.name+" "+e.salary);  
+    </script>      
 </head>
 <body>
+    
+</body>
 </html>
