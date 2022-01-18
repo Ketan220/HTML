@@ -1,14 +1,25 @@
-JavaScript Objects
+<!-- 3) JavaScript array constructor (new keyword)
 
-A javaScript object is an entity having state and behavior (properties and method). For example: car, pen, bike, chair, glass, keyboard, monitor etc.
+Here, you need to create instance of array by passing arguments in constructor so that we don't have to provide value explicitly.
 
-JavaScript is an object-based language. Everything is an object in JavaScript.
+The example of creating object by array constructor is given below. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var emp=new Array("Ketan","Varsha","Bhavesh")
 
-JavaScript is template based not class based. Here, we don't create class to get the object. But, we direct create objects.
-Creating Objects in JavaScript
-
-There are 3 ways to create objects.
-
-    By object literal
-    By creating instance of Object directly (using new keyword)
-    By using an object constructor (using new keyword)
+        for(i=0;i<emp.length;i++)
+        {
+            document.write("Name "+emp[i]+"<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
