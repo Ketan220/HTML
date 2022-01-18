@@ -1,6 +1,4 @@
-<!-- Example 1
-
-Let's see an example to display the sum of given numbers. -->
+<!-- Let's see the simple example of creating and using array in JavaScript. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +7,11 @@ Let's see an example to display the sum of given numbers. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var add=new Function("num1","num2","return num1+num2");
-        document.writeln(add(2,3));
+        var emp=["Manisha","Sudhir","Varsha"];
+        for(i=0;i<emp.length;i++)   //The .length property returns the length of an array.
+        {
+            document.write("Name "+emp[i]+"<br>");
+        }
     </script>
 </head>
 <body>
