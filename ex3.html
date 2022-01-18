@@ -1,24 +1,33 @@
-<!-- Example 2
+<!-- 2) JavaScript Array directly (new keyword)
 
-Let's see an example to display the power of provided value. -->
+    The syntax of creating array directly is given below:
+
+    var arrayname=new Array();  
+
+Here, new keyword is used to create instance of array.
+
+Let's see the example of creating array directly. -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var pow = new Function("num1", "num2", "return Math.pow(num1,num2)");
-        document.writeln(pow(2, 3));
-        alert("power " + pow(2, 3));
+        var i;
+        var emp=new Array()
+        emp[0]="Johnny";
+        emp[1]="Neyoo";
+        emp[2]="God";
+
+        for(i=0;i<emp.length;i++)
+        {
+            document.write("Name "+emp[i]+"<br>");
+        }
     </script>
-
 </head>
-
 <body>
-
+    
 </body>
-
 </html>
