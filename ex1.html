@@ -1,20 +1,37 @@
-JavaScript Function Object
+<!-- JavaScript Array
 
-In JavaScript, the purpose of Function constructor is to create a new Function object. It executes the code globally. However, if we call the constructor directly, a function is created dynamically but in an unsecured way.
-Syntax
+JavaScript array is an object that represents a collection of similar type of elements.
 
-    new Function ([arg1[, arg2[, ....argn]],] functionBody)  
+There are 3 ways to construct array in JavaScript
 
-Parameter
+    By array literal
+    By creating instance of Array directly (using new keyword)
+    By using an Array constructor (using new keyword)
 
-arg1, arg2, .... , argn - It represents the argument used by function.
+1) JavaScript array literal
 
-functionBody - It represents the function definition.
-JavaScript Function Methods
+The syntax of creating array using array literal is given below:
 
-Let's see function methods with description.
-Method 	Description
-apply() 	It is used to call a function contains this value and a single array of arguments.
-bind() 	It is used to create a new function.
-call() 	It is used to call a function contains this value and an argument list.
-toString() 	It returns the result in a form of a string.
+    var arrayname=[value1,value2.....valueN];  
+
+As you can see, values are contained inside [ ] and separated by , (comma).
+ex :1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var emp=["Ketan","Paritosh","Nayan"];
+        document.write("Name "+emp[0]+"<br>");
+        document.write("Name "+emp[1]+"<br>");
+        document.write("Name "+emp[2]+"<br>");
+        document.write(emp);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
