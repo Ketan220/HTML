@@ -1,32 +1,29 @@
-<!-- dom 
-The document object represents the whole html document.
+<!-- Reacting to Events
 
-When html document is loaded in the browser, it becomes a document object. It is the root element that represents the html document. It has properties and methods. By the help of document object, we can add dynamic content to our web page.
+A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.
 
-As mentioned earlier, it is the object of window. So
+To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:
+onclick=JavaScript
 
-    window.document  
+Examples of HTML events:
 
-Is same as
-
-    document  
-
-According to W3C - "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
-Properties of document object -->
-
-Let's see the properties of document object that can be accessed and modified by the document object.
-
-Methods of document object
-
-We can access and change the contents of document by its methods.
-
-The important methods of document object are as follows:
-Method	Description
-write("string")	writes the given string on the doucment.
-writeln("string")	writes the given string on the doucment with newline character at the end.
-getElementById()	returns the element having the given id value.
-getElementsByName()	returns all the elements having the given name value.
-getElementsByTagName()	returns all the elements having the given tag name.
-getElementsByClassName()	returns all the elements having the given class name.
-
-
+    When a user clicks the mouse
+    When a web page has loaded
+    When an image has been loaded
+    When the mouse moves over an element
+    When an input field is changed
+    When an HTML form is submitted
+    When a user strokes a key. 
+In this example, the content of the <h1> element is changed when a user clicks on it:-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 onclick="this.innerText='Ooops!'">Click This Text</h1>
+    </body>
+    </html>
