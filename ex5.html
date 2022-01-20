@@ -1,35 +1,31 @@
-<!-- 
-The document.getElementsByTagName() method returns all the element of specified tag name.
+<!-- Assign Events Using the HTML DOM
 
-The syntax of the getElementsByTagName() method is given below:
-
-    document.getElementsByTagName("name")  
-
-Here, name is required.
-
-Example of document.getElementsByTagName() method
-
-In this example, we going to count total number of paragraphs used in the document. To do this, we have called the document.getElementsByTagName("p") method that returns the total paragraphs.
- -->
+The HTML DOM allows you to assign events to HTML elements using JavaScript:  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function countpara() {
-            var totalpara=document.getElementsByTagName("p");
-            alert("Total Pargraphs:-"+totalpara.length);
+        document.getElementById("mybtn").onclick=displayDate;
+        function displatdate() {
+            document.getElementById("demo").innerHTML=Date();
         }
     </script>
-   
 </head>
+
 <body>
-    <p>This is a pragraph</p>  
-    <p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>  
-    <p>Let's see the simple example</p>  
-    <button onclick="countpara()">count paragraph</button>  
+    <h2>JavaScript HTML Events</h2>
+    
+    <p>Click "Try it" to execute the displayDate() function.</p>
+
+    <button id="myBtn">Try it</button>
+
+    <p id="demo"></p>
+
 </body>
+
 </html>
