@@ -1,36 +1,25 @@
-<!-- The innerHTML property can be used to write the dynamic html on the html document.
+<!-- The onmouseover and onmouseout Events
 
-It is used mostly in the web pages to generate the dynamic html such as registration form, comment form, links etc.
-Example of innerHTML property
-
-In this example, we are going to create the html form when user clicks on the button.
-
-In this example, we are dynamically writing the html form inside the div name having the id mylocation. We are identifing this position by calling the document.getElementById() method. -->
+The onmouseover and onmouseout events can be used to trigger a function when the user mouses over, or out of, an HTML element: -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript">
-        function showcomentform() {
-            var data = "Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea>  
-                < br > <input type='submit' value='Post Comment'>";
-
-                    document.getElementById("mylocation").innerHTML=data;  
+    <title>Document</title>
+    <script>
+        function mOver(obj) {
+            obj.innerHTML="Thank you";
+            obj.style.width="400px";
         }
-
+        function mOut(obj) {
+            obj.innerHTML="Mouse Over Me";
+            obj.style.width="200px";
+        }
     </script>
-
 </head>
-
 <body>
-    <form name="myForm">
-        <input type="button" value="comment" onclick="showcommentform()">
-        <div id="mylocation"></div>
-    </form>
-
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: burlywood;width: 120px;height: 20px;padding: 10px;">Mouse Over Me</div>
 </body>
-
 </html>
