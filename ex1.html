@@ -1,37 +1,32 @@
-<!-- JavaScript Array
+<!-- dom 
+The document object represents the whole html document.
 
-JavaScript array is an object that represents a collection of similar type of elements.
+When html document is loaded in the browser, it becomes a document object. It is the root element that represents the html document. It has properties and methods. By the help of document object, we can add dynamic content to our web page.
 
-There are 3 ways to construct array in JavaScript
+As mentioned earlier, it is the object of window. So
 
-    By array literal
-    By creating instance of Array directly (using new keyword)
-    By using an Array constructor (using new keyword)
+    window.document  
 
-1) JavaScript array literal
+Is same as
 
-The syntax of creating array using array literal is given below:
+    document  
 
-    var arrayname=[value1,value2.....valueN];  
+According to W3C - "The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+Properties of document object -->
 
-As you can see, values are contained inside [ ] and separated by , (comma).
-ex :1 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        var emp=["Ketan","Paritosh","Nayan"];
-        document.write("Name "+emp[0]+"<br>");
-        document.write("Name "+emp[1]+"<br>");
-        document.write("Name "+emp[2]+"<br>");
-        document.write(emp);
-    </script>
-</head>
-<body>
-    
-</body>
-</html>
+Let's see the properties of document object that can be accessed and modified by the document object.
+
+Methods of document object
+
+We can access and change the contents of document by its methods.
+
+The important methods of document object are as follows:
+Method	Description
+write("string")	writes the given string on the doucment.
+writeln("string")	writes the given string on the doucment with newline character at the end.
+getElementById()	returns the element having the given id value.
+getElementsByName()	returns all the elements having the given name value.
+getElementsByTagName()	returns all the elements having the given tag name.
+getElementsByClassName()	returns all the elements having the given class name.
+
+
