@@ -1,4 +1,9 @@
-<!--  Example of object in form -->
+<!-- The innerText property can be used to write the dynamic text on the html document. Here, text will not be interpreted as html text but a normal text.
+
+It is used mostly in the web pages to generate the dynamic content such as writing the validation message, password strength etc.
+Javascript innerText Example
+
+In this example, we are going to display the password strength when releases the key after press. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,34 +12,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function getresult(m1,m2,m3) {
-            var emp=new Object();
-            emp.empno=m1;
-	        emp.name=m2;
-	        emp.salary=m3;
-
-            document.getElementById("r1").innerHTML=emp.empno;
-	        document.getElementById("r2").innerHTML=emp.name;
-         	document.getElementById("r3").innerHTML=emp.salary;
-        } 
+        function validate() {
+            var msg;
+            if(document.myform.userpass.value.length>5)
+            {
+                msg="Good";
+            }
+            else
+            {
+                 msg="Poor";
+            }
+            document.getElementById("mylocation").innerText=msg;
+        }
     </script>
 </head>
 <body>
-    <form name="f1">
-        Enter empno. <input type="text" name="t1">
-        <br><br>
-        Enter empname <input type="text" name="t2">
-        <br><br>
-        Enter empsalary <input type="text" name="t3">
-        <br><br>
-
-        <input type="button" value="click" onclick="getresult(document.f1.t1.value,document.f1.t2.value,document.f1.t3.value)" >
-        <br><br>
-        
-        Empno. :<span id="r1"></span>
-        <br><br>
-        Empname :<span id="r2"></span>
-        <br><br>
-        Empsalary :<span id="r3"></span>
+    <form name="myform">
+        <input type="password" value="" name="userpass" onkeyup="validate()">
+        Strength: <span id="mylocation">no strength</span>
+    </form>
 </body>
 </html>
