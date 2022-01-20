@@ -1,8 +1,4 @@
-<!-- Defining method in JavaScript Object
-
-We can define method in JavaScript object. But before defining method, we need to add property in the function with same name as method.
-
-The example of defining method in object is given below. -->
+<!-- JavaScript Retype Password Validation -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,28 +6,27 @@ The example of defining method in object is given below. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>  
-        function emp(id,name,salary){  
-        this.id=id;  
-        this.name=name;  
-        this.salary=salary;  
-          
-        this.changeSalary=changeSalary; 
-
-        function changeSalary(otherSalary){  
-        this.salary=otherSalary;  
-        }
-
-        }  
-
-        e=new emp(103,"Sonoo Jaiswal",30000);  
-        document.write(e.id+" "+e.name+" "+e.salary); 
+    <script>
+        function validateform() {
+            var num=document.myform.num.value;
          
-        e.changeSalary(45000);  
-        document.write("<br>"+e.id+" "+e.name+" "+e.salary);  
-    </script>      
+
+            if(isNaN(num))
+            {
+                document.getElementById("numloc").innerHTML="Enter the numeric number only";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
 </head>
 <body>
-    
+    <form name="myform" onsubmit="return validateform()">
+        Enter number <input type="text" name="num" > <span id="numloc"></span><br>
+        <input type="submit" value="submit">
+    </form>
 </body>
 </html>
