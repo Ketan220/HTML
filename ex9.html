@@ -1,9 +1,5 @@
-<!-- The innerText property can be used to write the dynamic text on the html document. Here, text will not be interpreted as html text but a normal text.
-
-It is used mostly in the web pages to generate the dynamic content such as writing the validation message, password strength etc.
-Javascript innerText Example
-
-In this example, we are going to display the password strength when releases the key after press. -->
+<!-- onmousedown and onmouseup
+Change an image when a user holds down the mouse button. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,24 +8,16 @@ In this example, we are going to display the password strength when releases the
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function validate() {
-            var msg;
-            if(document.myform.userpass.value.length>5)
-            {
-                msg="Good";
-            }
-            else
-            {
-                 msg="Poor";
-            }
-            document.getElementById("mylocation").innerText=msg;
+        function lighton() {
+            document.getElementById("myimg").src="h1.jpg";
+        }
+        function lightof() {
+            document.getElementById("myimg").src="h2.jpg";
         }
     </script>
 </head>
 <body>
-    <form name="myform">
-        <input type="password" value="" name="userpass" onkeyup="validate()">
-        Strength: <span id="mylocation">no strength</span>
-    </form>
+    <img id="myimg" onmousedown="lighton()" onmouseup="lightof()" src="h2.jpg" width="170"  height="100"  alt="Error Loading">
+    <p>Click mouse and hold down!</p>
 </body>
 </html>
