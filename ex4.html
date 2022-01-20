@@ -1,39 +1,23 @@
-<!-- The document.getElementsByName() method returns all the element of specified name.
+<!-- HTML Event Attributes
 
-The syntax of the getElementsByName() method is given below:
-
-    document.getElementsByName("name")  
-
-Here, name is required.
-
-Example of document.getElementsByName() method
-
-In this example, we going to count total number of genders. Here, we are using getElementsByName() method to get all the genders. -->
+To assign events to HTML elements you can use event attributes. -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="text/javascript">
-        function totalelements() {
-            var allgenders = document.getElementsByName("gender");
-            alert("Total Genders:" + allgenders.length);
+    <script>
+        function displaydate(){
+            document.getElementById("demo").innerHTML=Date();
         }
-
     </script>
-
 </head>
-
 <body>
-    <form>
-        Male:<input type="radio"  value="male"  name="gender">
-        Female:<input type="radio" value="female"  name="gender">
-
-        <input type="button"  value="Total Genders" onclick="totalelements();">
-    </form>
+    <h1>Javascript Event Attributes</h1>
+    <p>Click This Button To Display The Date</p>
+    <button onclick="displaydate()">The Date is!</button>
+    <span id="demo"></span>
 </body>
-
 </html>
