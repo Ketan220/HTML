@@ -1,13 +1,4 @@
-<!-- 
-2) By creating instance of Object
-
-The syntax of creating object directly is given below:
-
-    var objectname=new Object();  
-
-Here, new keyword is used to create object.
-
-Let’s see the example of creating object directly. -->
+<!-- Show/Hide Comment Form Example using innerHTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,15 +7,26 @@ Let’s see the example of creating object directly. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>  
-        var emp=new Object();  
-        emp.id=101;  
-        emp.name="Ravi Malik";  
-        emp.salary=50000;  
-        document.write(emp.id+" "+emp.name+" "+emp.salary);  
-    </script>  
+        var flag=true;  
+        function commentform(){  
+        var cform="<form action='Comment'>Enter Name:<br><input type='text' name='name'/><br/>  
+        Enter  Email:<br><input type='email' name='email'/><br>Enter Comment:<br/>  
+        <textarea rows='5' cols='70'></textarea><br><input type='submit' value='Post Comment'/></form>";  
+        if(flag){  
+        document.getElementById("mylocation").innerHTML=cform;  
+        flag=false;  
+        }else{  
+        document.getElementById("mylocation").innerHTML="";  
+        flag=true;  
+        }  
+        }  
+        </script>  
     
 </head>
 <body>
     
+    <button onclick="commentform()">Comment</button>  
+    <div id="mylocation"></div>  
+
 </body>
 </html>
