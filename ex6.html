@@ -1,7 +1,8 @@
-<!-- Let's see the simple example
-Another example of document.getElementsByTagName() method
+<!-- The onchange Event
 
-In this example, we going to count total number of h2 and h3 tags used in the document. -->
+The onchange event is often used in combination with validation of input fields.
+
+Below is an example of how to use the onchange. The upperCase() function will be called when a user changes the content of an input field. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,23 +11,14 @@ In this example, we going to count total number of h2 and h3 tags used in the do
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function count1(){
-            var totalpara1=document.getElementsByTagName("h2");
-            alert("Total h2 Para:-"+totalpara1.length);
-        }
-        function count2(){
-            var totalpara2=document.getElementsByTagName("h3");
-            alert("Total h3 Para:-"+totalpara2.length);
+        function upperCase() {
+            const x=document.getElementById("fname");
+            x.value=x.value.toUpperCase();
         }
     </script>
 </head>
 <body>
-    <h2>This Is h2 tag</h2>
-    <h2>This Is h2 tag</h2>
-    <h3>This is h3 tag</h3>
-    <h3>This is h3 tag</h3>
-    <h3>This is h3 tag</h3>
-    <button onclick="count1()">Count h2</button>
-    <button onclick="count2()">Count h3</button>
+    <h2>JavaScript HTML Events</h2>
+     Enter Name: <input type="text" id="fname" onchange="upperCase()">   <!--upperCase function is used to covert smallcase alphabet into uppercase -->
 </body>
 </html>
