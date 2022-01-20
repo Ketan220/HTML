@@ -1,4 +1,5 @@
-<!-- JavaScript Retype Password Validation -->
+<!-- onfocus
+Change the background-color of an input field when it gets focus. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,26 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function validateform() {
-            var num=document.myform.num.value;
-         
-
-            if(isNaN(num))
-            {
-                document.getElementById("numloc").innerHTML="Enter the numeric number only";
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+        function msg(obj) {
+            obj.style.backgroundColor="lightblue";
         }
     </script>
 </head>
 <body>
-    <form name="myform" onsubmit="return validateform()">
-        Enter number <input type="text" name="num" > <span id="numloc"></span><br>
-        <input type="submit" value="submit">
-    </form>
+    Enter Name: <input type="text" onfocus="msg(this)">
+    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
 </body>
 </html>
