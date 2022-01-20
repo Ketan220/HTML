@@ -1,4 +1,7 @@
-<!--  Another Examole of Object Lateral -->
+<!-- Let's see the simple example
+Another example of document.getElementsByTagName() method
+
+In this example, we going to count total number of h2 and h3 tags used in the document. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        student={rno:13,name:"mayur"};
-        alert(student.rno);
-        alert(student.name);
+        function count1(){
+            var totalpara1=document.getElementsByTagName("h2");
+            alert("Total h2 Para:-"+totalpara1.length);
+        }
+        function count2(){
+            var totalpara2=document.getElementsByTagName("h3");
+            alert("Total h3 Para:-"+totalpara2.length);
+        }
     </script>
 </head>
 <body>
-    
+    <h2>This Is h2 tag</h2>
+    <h2>This Is h2 tag</h2>
+    <h3>This is h3 tag</h3>
+    <h3>This is h3 tag</h3>
+    <h3>This is h3 tag</h3>
+    <button onclick="count1()">Count h2</button>
+    <button onclick="count2()">Count h3</button>
 </body>
 </html>
