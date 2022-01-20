@@ -1,10 +1,11 @@
-<!-- 3) By using an Object constructor
+<!-- JavaScript provides facility to validate the form on the client-side so data processing will be faster than server-side validation. Most of the web developers prefer JavaScript form validation.
 
-Here, you need to create function with arguments. Each argument value can be assigned in the current object by using this keyword.
+Through JavaScript, we can validate name, password, email, date, mobile numbers and more fields.
+JavaScript Form Validation Example
 
-The this keyword refers to the current object.
+In this example, we are going to validate the name and password. The name can’t be empty and password can’t be less than 6 characters long.
 
-The example of creating object by object constructor is given below. -->
+Here, we are validating the form on form submit. The user will not be forwarded to the next page until given values are correct. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +13,31 @@ The example of creating object by object constructor is given below. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>  
-        function emp(id,name,salary){  
-        this.id=id;  
-        this.name=name;  
-        this.salary=salary;  
-        }  
-        e=new emp(103,"Vimal Jaiswal",30000);  
-          
-        document.write(e.id+" "+e.name+" "+e.salary);  
-    </script>      
+    <script>
+        function validateform() {
+        var t1=document.myform.name.value;
+        var t2=document.myform.password.value;
+
+        if(t1==null || t1=="")
+        {
+            alert("Name can not be blanck");
+            return false;
+        }
+        else if(t2.length<6)
+        {
+            alert("Password must be at least 6 Character long");
+            return false;
+        }
+    }
+    </script>
 </head>
 <body>
-    
+    <form name="myform" " method="post" action="abc.jsp" onsubmit="return validateform()">
+        <input type="text" name="name">
+        <br><br>
+        <input type="password" name="password">
+        <br><br>
+        <input type="submit" value="register">  
+    </form>
 </body>
 </html>
