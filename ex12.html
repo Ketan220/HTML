@@ -1,14 +1,5 @@
-<!-- JavaScript email validation
-
-We can validate the email by the help of JavaScript.
-
-There are many criteria that need to be follow to validate the email id such as:
-
-    email id must contain the @ and . character
-    There must be at least one character before and after the @.
-    There must be at least two characters after . (dot).
-
-Let's see the simple example to validate the email field. -->
+Mouse Events
+Change the color of an element when the cursor moves over it.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,23 +7,11 @@ Let's see the simple example to validate the email field. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function validatemail() {
-         var x=document.myform.email.value;  
-         var atposition=x.indexOf("@");  
-         var dotposition=x.lastIndexOf(".");  
-        if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
-        {  
-           alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
-           return false;  
-        }  
-    }
-    </script>
 </head>
+
 <body>
-    <form name="myform" method="post" action="#" onsubmit="return validatemail()"></form>
-    Enter Email: <input type="text" name="email">
-    <br><br>
-    <input type="submit" value="Register">
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">
+        Mouse over this text</h1>
 </body>
+
 </html>
