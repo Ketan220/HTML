@@ -1,11 +1,5 @@
-<!-- JavaScript provides facility to validate the form on the client-side so data processing will be faster than server-side validation. Most of the web developers prefer JavaScript form validation.
-
-Through JavaScript, we can validate name, password, email, date, mobile numbers and more fields.
-JavaScript Form Validation Example
-
-In this example, we are going to validate the name and password. The name can’t be empty and password can’t be less than 6 characters long.
-
-Here, we are validating the form on form submit. The user will not be forwarded to the next page until given values are correct. -->
+<!-- onload
+Display an alert box when the page has finished loading. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,30 +8,12 @@ Here, we are validating the form on form submit. The user will not be forwarded 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function validateform() {
-        var t1=document.myform.name.value;
-        var t2=document.myform.password.value;
-
-        if(t1==null || t1=="")
-        {
-            alert("Name can not be blanck");
-            return false;
+        function mymeesage() {
+            alert("This message was triggered from the onload event");
         }
-        else if(t2.length<6)
-        {
-            alert("Password must be at least 6 Character long");
-            return false;
-        }
-    }
     </script>
 </head>
-<body>
-    <form name="myform" " method="post" action="abc.jsp" onsubmit="return validateform()">
-        <input type="text" name="name">
-        <br><br>
-        <input type="password" name="password">
-        <br><br>
-        <input type="submit" value="register">  
-    </form>
+<body onload="mymeesage()">
+    
 </body>
 </html>
