@@ -1,37 +1,36 @@
-<!-- example object in form -->
+<!-- The innerHTML property can be used to write the dynamic html on the html document.
+
+It is used mostly in the web pages to generate the dynamic html such as registration form, comment form, links etc.
+Example of innerHTML property
+
+In this example, we are going to create the html form when user clicks on the button.
+
+In this example, we are dynamically writing the html form inside the div name having the id mylocation. We are identifing this position by calling the document.getElementById() method. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function getresult() {
-            emp={no:123,name:"paritosh",salry: 25000};
-            document.getElementById("r1").innerHTML=emp.no;
-            document.getElementById("r2").innerHTML=emp.name;
-            document.getElementById("r3").innerHTML=emp.salary;
-        }
-    </script>
-</head>
-<body>
-    <form name="f1">
-        Enter empno. <input type="text" name="t1">
-        <br><br>
-        Enter empname <input type="text" name="t2">
-        <br><br>
-        Enter empsalary <input type="text" name="t3">
-        <br><br>
+    <script type="text/javascript">
+        function showcomentform() {
+            var data = "Name:<input type='text' name='name'><br>Comment:<br><textarea rows='5' cols='80'></textarea>  
+                < br > <input type='submit' value='Post Comment'>";
 
-        <input type="button" value="click" onclick="getresult(document.f1.t1.value,document.f1.t2.value,document.f1.t3.value);">
-        <br><br>
-        
-        Empno. :<span id="r1"></span>
-        <br><br>
-        Empname :<span id="r2"></span>
-        <br><br>
-        Empsalary :<span id="r3"></span>
+                    document.getElementById("mylocation").innerHTML=data;  
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <form name="myForm">
+        <input type="button" value="comment" onclick="showcommentform()">
+        <div id="mylocation"></div>
     </form>
+
 </body>
+
 </html>
