@@ -1,16 +1,4 @@
-<!-- Accessing field value by document object
-
-In this example, we are going to get the value of input text by user. Here, we are using document.form1.name.value to get the value of name field.
-
-Here, document is the root element that represents the html document.
-
-form1 is the name of the form.
-
-name is the attribute name of the input text.
-
-value is the property, that returns the value of the input text.
-
-Let's see the simple example of document object that prints name with welcome message. -->
+<!-- Another Example -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +6,11 @@ Let's see the simple example of document object that prints name with welcome me
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        function printvalue() {
-            var name=document.f1.name.value;
-            alert("Welcome " + name);
-        }
-    </script>
 </head>
 <body>
-    <form name="f1">
-        Enter Name;<input type="text" name="name">
-        <input type="button" value="printname" onclick="printvalue()">
-    </form>
+    <h2 id="h">MKPITS</h2>
+    <script>
+        document.getElementById("h").style.color="blue";
+    </script>
 </body>
 </html>
