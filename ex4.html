@@ -1,25 +1,39 @@
-<!-- 3) JavaScript array constructor (new keyword)
+<!-- The document.getElementsByName() method returns all the element of specified name.
 
-Here, you need to create instance of array by passing arguments in constructor so that we don't have to provide value explicitly.
+The syntax of the getElementsByName() method is given below:
 
-The example of creating object by array constructor is given below. -->
+    document.getElementsByName("name")  
+
+Here, name is required.
+
+Example of document.getElementsByName() method
+
+In this example, we going to count total number of genders. Here, we are using getElementsByName() method to get all the genders. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        var emp=new Array("Ketan","Varsha","Bhavesh")
-
-        for(i=0;i<emp.length;i++)
-        {
-            document.write("Name "+emp[i]+"<br>");
+    <script type="text/javascript">
+        function totalelements() {
+            var allgenders = document.getElementsByName("gender");
+            alert("Total Genders:" + allgenders.length);
         }
+
     </script>
+
 </head>
+
 <body>
-    
+    <form>
+        Male:<input type="radio"  value="male"  name="gender">
+        Female:<input type="radio" value="female"  name="gender">
+
+        <input type="button"  value="Total Genders" onclick="totalelements();">
+    </form>
 </body>
+
 </html>
