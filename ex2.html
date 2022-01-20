@@ -1,4 +1,16 @@
-<!-- Let's see the simple example of creating and using array in JavaScript. -->
+<!-- Accessing field value by document object
+
+In this example, we are going to get the value of input text by user. Here, we are using document.form1.name.value to get the value of name field.
+
+Here, document is the root element that represents the html document.
+
+form1 is the name of the form.
+
+name is the attribute name of the input text.
+
+value is the property, that returns the value of the input text.
+
+Let's see the simple example of document object that prints name with welcome message. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +19,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var emp=["Manisha","Sudhir","Varsha"];
-        for(i=0;i<emp.length;i++)   //The .length property returns the length of an array.
-        {
-            document.write("Name "+emp[i]+"<br>");
+        function printvalue() {
+            var name=document.f1.name.value;
+            alert("Welcome " + name);
         }
     </script>
 </head>
 <body>
-    
+    <form name="f1">
+        Enter Name;<input type="text" name="name">
+        <input type="button" value="printname" onclick="printvalue()">
+    </form>
 </body>
 </html>
