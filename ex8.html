@@ -1,4 +1,6 @@
-<!-- Show/Hide Comment Form Example using innerHTML -->
+<!-- The onmousedown, onmouseup and onclick Events
+
+The onmousedown, onmouseup, and onclick events are all parts of a mouse-click. First when a mouse-button is clicked, the onmousedown event is triggered, then, when the mouse-button is released, the onmouseup event is triggered, finally, when the mouse-click is completed, the onclick event is triggered. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,27 +8,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>  
-        var flag=true;  
-        function commentform(){  
-        var cform="<form action='Comment'>Enter Name:<br><input type='text' name='name'/><br/>  
-        Enter  Email:<br><input type='email' name='email'/><br>Enter Comment:<br/>  
-        <textarea rows='5' cols='70'></textarea><br><input type='submit' value='Post Comment'/></form>";  
-        if(flag){  
-        document.getElementById("mylocation").innerHTML=cform;  
-        flag=false;  
-        }else{  
-        document.getElementById("mylocation").innerHTML="";  
-        flag=true;  
-        }  
-        }  
-        </script>  
-    
+    <script>
+        function mDown(obj) {
+            obj.innerHTML="Release Me";
+            obj.style.backgroundColor="pink";
+        }
+        function mUp(obj) {
+            obj.innerHTML="Thank Tou";
+            obj.style.backgroundColor="lightblue";
+        }
+    </script>
 </head>
 <body>
-    
-    <button onclick="commentform()">Comment</button>  
-    <div id="mylocation"></div>  
-
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: burlywood;width: 90px;height: 20px;padding: 10px;">Click Me</div>
 </body>
 </html>
